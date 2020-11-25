@@ -157,12 +157,18 @@ list[0] = @"asdff";
 如果想实现字典访问方式，则实现以下两个方法即可：
 
 ```objectivec
-- (id)objectForKeyedSubscript:(id)key{
-    return self.dict[key];
+// .h
+- (ObjectType)objectForKeyedSubscript:(KeyType <NSCopying>)key;
+- (void)setObject:(ObjectType)obj forKeyedSubscript:(KeyType <NSCopying>)key;
+
+// .m
+- (id)objectForKeyedSubscript:(id<NSCopying>)key {
+    return _dict[key];
 }
 
-- (id)objectAtIndexedSubscript:(NSUInteger)idx{
-    return self.array[idx];
+- (void)setObject:(id)obj forKeyedSubscript:(id<NSCopying>)key {
+    _dict[key] = obj;
 }
+
 ```
 
