@@ -80,5 +80,7 @@ for循环中每次处理一个文件。 在自动释放池内的每个被发送�
 
 在自动释放池外保留`match`对象，然后在返回的时候发送`autorelease`消息来延长生命周期。
 
+**来源：[Threading Programming Guide-Run Loops](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/Multithreading/RunLoopManagement/RunLoopManagement.html#//apple_ref/doc/uid/10000057i-CH16-SW10)**
+
 
 
